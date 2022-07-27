@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Poppins",Arial,sans-serif;
     background: #fff;
@@ -114,7 +117,6 @@ h1 {
 }
 .container {
     max-width: 1140px;
-    z-index: -1;
 }
 .mw{
     width:175px;
@@ -395,7 +397,6 @@ div .count-anime::after {
     margin-right: 20px;
 }
 .border-sq{
-    border: solid black ;
     border-radius: 0.3rem!important;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     padding:20px;
@@ -517,6 +518,8 @@ div .count-anime::after {
     padding: 0;
     margin:20px;
     text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
 }
 .page4{
     margin: 0 auto;
@@ -529,6 +532,49 @@ div .count-anime::after {
 }
 .blue-hr
 {width:50px;
-background:#3e64ff}
+background:#3e64ff;}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
 
+.arrow-button .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
 
+.arrow-button .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -50px;
+}
+#diamond:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red;
+}
