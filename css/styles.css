@@ -1,6 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
+body .page4{
+    margin:0;
+}
 body{
     font-family: "Poppins",Arial,sans-serif;
     background: #fff;
@@ -8,6 +11,7 @@ body{
     line-height: 1.8;
     font-weight: 400;
     color: #999;
+    margin:0;
 }
 .container{
     width: 1100px;
@@ -64,7 +68,9 @@ li{
     width: 50%;
     background-color: #3e64ff;
     z-index: -1;
+    height:806px;
 }
+
 .hover-underline-animation {
      display: inline-block;
      position: relative;
@@ -85,7 +91,57 @@ li{
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
+.page3 a:hover{
+    background-color: #3e64ff;
+    opacity: 0.8;
+}
+.container-img {
+    position: relative;
+    width: 50%;
+}
 
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:340px;
+    width: 100px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #3e64ff;
+}
+
+.container-img:hover .overlay-img {
+    opacity: 0.8;
+}
+
+.text-img {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.page3 a{
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+}
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -146,11 +202,11 @@ h1 {
 .page2{
     margin:0 auto;
     width:1100px;
-    padding-top:44px;
+    padding-top:39px;
     padding-right:83px;
 }
 .overlay-img{
-    width: 50%;
+    width: 100%;
 }
 .about-img{
     width:140%;
@@ -274,7 +330,7 @@ div .count-anime::after {
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     border-radius: 40px;
-    -webkit-box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
+    -webkit-box-shadow: 0 24px 36px -11px rgb(0 0 0 );
     -moz-box-shadow: 0 24px 36px -11px rgba(0,0,0,.09);
     box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
     font-size: 12px;
@@ -303,9 +359,10 @@ div .count-anime::after {
 .page3{
     margin: 0 auto;
     width: 1100px;
-    padding-top: 44px;
+    padding-top: 70px;
     padding-right: 79px;
 }
+
 .p3 li{
     display:flex;
     font-weight: 600;
@@ -521,15 +578,13 @@ div .count-anime::after {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 
 }
-.page4{
-    margin: 0 auto;
-    width: 1200px;
-    padding-top: 44px;
-    padding-right: 79px;
-}
-.page4 a:hover{
-    background-color:#3e64ff;
-}
+.col-blog
+{
+    flex: 1;
+    padding: 0;
+    margin:10px;
+    text-align: left;
+    }
 .blue-hr
 {width:50px;
 background:#3e64ff;}
@@ -560,21 +615,98 @@ background:#3e64ff;}
     -webkit-transform: rotate(45deg);
 }
 
-#diamond {
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-bottom-color: red;
-    position: relative;
-    top: -50px;
+.page4{
+    margin: 0 auto;
+    padding-top: 70px;
 }
-#diamond:after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 50px;
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-top-color: red;
+.column-projects {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after image containers */
+.row-projects::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row-projects {
+    display: flex;
+}
+.row-projects-2 {
+    display: flex;
+    margin-top:-9px;
+}
+.column-projects {
+    flex: 33.33%;
+}
+.container-projects{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.height{
+    height:340px;
+}
+.sticky{
+    top:200px;
+    position:-webkit-sticky;
+    position: sticky;
+}
+.projects{
+    text-align: center;
+}
+.page4 span{
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    color: rgba(0,0,0,.8);
+    margin-left:40px;
+}
+.page4 h2{
+    color:#3e64ff;
+    font-weight: 700;
+    font-size: 30px;
+}
+.top-pad{
+    padding-top:50px;
+}
+.page5{
+    margin: 0 auto;
+    width: 1300px;
+    padding-top: 70px;
+}
+.page5 a{
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+.page5 a:hover{
+    color:#3e64ff;
+    transition: 0.3s all ease;
+
+}
+.wallpaper{
+    width:100%;
+    background: no-repeat url("../imgs/wallpaper.webp");
+    background-size: cover;
+    height:300px;
+    background-position: center center;
+    background-color:blue;
+}
+.wallpaper .transbox {
+    margin:0px;
+    background-color: #3e64ff;
+    border: 1px solid black;
+    opacity: 0.6;
+    text-align: center;
+    height:297px;
+}
+
+.wallpaper .transbox p {
+    margin-top:9%;
+    font-weight: bold;
+    color: #000000;
 }
